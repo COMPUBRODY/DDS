@@ -1,0 +1,11 @@
+module fsm_module (
+
+    input clock,
+    input state,
+    input data,
+    output state,
+    output  data_out,
+
+);
+
+endmodule
