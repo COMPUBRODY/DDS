@@ -1,3 +1,15 @@
-|tb_memory_rw
+|mem_read_file
+rd => data[0].OE
+rd => data[1].OE
+rd => data[2].OE
+rd => data[3].OE
+wr => ~NO_FANOUT~
+addr[0] => ~NO_FANOUT~
+addr[1] => ~NO_FANOUT~
+addr[2] => ~NO_FANOUT~
+data[0] <> data[0]
+data[1] <> data[1]
+data[2] <> data[2]
+data[3] <> data[3]
 
 

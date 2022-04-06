@@ -72,7 +72,7 @@ module contador_0_to_9675(
 
       /* Enables SW - 3.3V */
 	`ifdef ENABLE_SW
-      input       [9:0]  SW
+      input       [9:0]  SW,
 	`endif
 
 );

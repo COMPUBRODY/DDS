@@ -1,5 +1,5 @@
 Analysis & Elaboration report for dds_generator
-Thu Mar 31 19:51:25 2022
+Mon Apr 04 00:59:56 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,6 +11,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -36,10 +37,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Mar 31 19:51:25 2022           ;
+; Analysis & Elaboration Status ; Failed - Mon Apr 04 00:59:56 2022           ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; dds_generator                               ;
-; Top-level Entity Name         ; tb_memory_rw                                ;
+; Top-level Entity Name         ; dds                                         ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -73,7 +74,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; tb_memory_rw       ; dds_generator      ;
+; Top-level entity name                                                           ; dds                ; dds_generator      ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,29 +161,48 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 31 19:51:03 2022
+    Info: Processing started: Mon Apr 04 00:59:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dds_generator -c dds_generator --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Error (10170): Verilog HDL syntax error at dds.v(63) near text: "<";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/dds.v Line: 63
+Error (10112): Ignored design unit "dds" at dds.v(3) due to previous errors File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/dds.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file dds.v
+Info (12021): Found 1 design units, including 1 entities, in source file experimentos/diagrama_bloques.bdf
+    Info (12023): Found entity 1: diagrama_bloques
+Info (12021): Found 1 design units, including 1 entities, in source file mem_read_file.v
+    Info (12023): Found entity 1: mem_read_file File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/mem_read_file.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file de1_soc_golden_top.v
+    Info (12023): Found entity 1: contador_0_to_9675 File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/DE1_SOC_golden_top.v Line: 46
+Critical Warning (10191): Verilog HDL Compiler Directive warning at tb_memory_rw.v(11): text macro "DATA_LEN" is undefined File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/tb_module/tb_memory_rw.v Line: 11
+Critical Warning (10191): Verilog HDL Compiler Directive warning at tb_memory_rw.v(12): text macro "ROWS_BASE_2" is undefined File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/tb_module/tb_memory_rw.v Line: 12
+Critical Warning (10191): Verilog HDL Compiler Directive warning at tb_memory_rw.v(86): text macro "MHZ" is undefined File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/tb_module/tb_memory_rw.v Line: 86
 Info (12021): Found 1 design units, including 1 entities, in source file tb_module/tb_memory_rw.v
     Info (12023): Found entity 1: tb_memory_rw File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/tb_module/tb_memory_rw.v Line: 3
-Info (12021): Found 0 design units, including 0 entities, in source file read_file.v
+Info (12021): Found 1 design units, including 1 entities, in source file read_file.v
+    Info (12023): Found entity 1: splitfiles File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/read_file.v Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file memory_ram.v
     Info (12023): Found entity 1: single_port_ram File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/memory_ram.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
     Info (12023): Found entity 1: four_state_mealy_state_machine File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/fsm.v Line: 8
 Info (12021): Found 0 design units, including 0 entities, in source file config_files/param_values.v
+Warning (10274): Verilog HDL macro warning at config.v(21): overriding existing definition for macro "MHZ", which was defined in "tb_module/tb_memory_rw.v", line 86 File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/config_files/config.v Line: 21
+Warning (10274): Verilog HDL macro warning at config.v(29): overriding existing definition for macro "DATA_LEN", which was defined in "tb_module/tb_memory_rw.v", line 11 File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/config_files/config.v Line: 29
+Warning (10274): Verilog HDL macro warning at config.v(31): overriding existing definition for macro "ROWS_BASE_2", which was defined in "tb_module/tb_memory_rw.v", line 12 File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/config_files/config.v Line: 31
 Info (12021): Found 0 design units, including 0 entities, in source file config_files/config.v
 Info (12021): Found 1 design units, including 1 entities, in source file hardware_modules/preescaller.v
     Info (12023): Found entity 1: preescaller File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/hardware_modules/preescaller.v Line: 5
-Warning (10222): Verilog HDL Parameter Declaration warning at preescaller.v(16): Parameter Declaration in module "preescaller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/hardware_modules/preescaller.v Line: 16
-Info (12127): Elaborating entity "tb_memory_rw" for the top level hierarchy
-Warning (12158): Entity "tb_memory_rw" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 3 warnings
-    Error: Peak virtual memory: 4765 megabytes
-    Error: Processing ended: Thu Mar 31 19:51:25 2022
-    Error: Elapsed time: 00:00:22
-    Error: Total CPU time (on all processors): 00:00:46
+Info (144001): Generated suppressed messages file C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/output_files/dds_generator.map.smsg
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 7 warnings
+    Error: Peak virtual memory: 4775 megabytes
+    Error: Processing ended: Mon Apr 04 00:59:56 2022
+    Error: Elapsed time: 00:00:33
+    Error: Total CPU time (on all processors): 00:00:54
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/output_files/dds_generator.map.smsg.
 
 

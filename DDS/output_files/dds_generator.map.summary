@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Thu Mar 31 19:51:25 2022
+Analysis & Elaboration Status : Failed - Mon Apr 04 00:59:56 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : dds_generator
-Top-level Entity Name : tb_memory_rw
+Top-level Entity Name : dds
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

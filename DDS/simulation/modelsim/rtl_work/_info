@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/simulation/modelsim
+vmem_read_file
+!s110 1648949956
+!i10b 1
+!s100 UF2LncE]`6oYNVCU:IH_l2
+IaLoc71gH5f_@7lDD>eH`m0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1648945524
+8C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/mem_read_file.v
+FC:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/mem_read_file.v
+L0 3
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1648949956.000000
+!s107 C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/mem_read_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS|C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS/mem_read_file.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Madera/Documents/Quartus_Workspace/dds_generator/DDS
+tCvgOpt 0
